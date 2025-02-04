@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-nav .nav-link {
+    cursor: pointer;
+  }
+  
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #007bff !important;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
