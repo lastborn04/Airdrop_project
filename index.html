@@ -1,537 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airdrop Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airdrop Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #f59e0b;
+            --background: #ffffff;
+            --text-color: #1e293b;
+        }
 
-  <!-- Bootstrap CSS -->
-  <Referral Link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Custom CSS -->
-  <Referral Link href="style.css" rel="stylesheet">
+        [data-theme="dark"] {
+            --primary-color: #818cf8;
+            --secondary-color: #fbbf24;
+            --background: #0f172a;
+            --text-color: #f8fafc;
+        }
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
+        body {
+            background-color: var(--background);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
 
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .category-banner {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            color: white;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-bar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+    </style>
 </head>
-<body class="bg-light">
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-primary" href="#">AirdropHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#testnet">Testnet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depin">DePIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#telegram">Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Navigation Menu -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#">Airdrop Projects</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-Referral Link active" href="#" data-filter="all">All</a></li>
-          <li class="nav-item"><a class="nav-Referral Link" href="#" data-filter="testnet">testnet</a></li>
-          <li class="nav-item"><a class="nav-Referral Link" href="#" data-filter="depin">depin</a></li>
-          <li class="nav-item"><a class="nav-Referral Link" href="#" data-filter="telegram">telegrams</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="container py-5">
-    <h1 class="text-center mb-4">Airdrop Projects</h1>
-
-    <!-- Testnet -->
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">MONAD TESTNET</h2>
-        <p class="card-text">Earn rewards by participating in MONAD.</p>
-        <a href="https://x.com/kroweskynx/status/1886355259955577025" class="btn btn-success">View Steps</a>
-      </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">PLAZA FINANCE</h2>
-        <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
-        <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
-      </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">BLOCKSCOUT</h2>
-        <p class="card-text">Earn rewards by participating in BLOCKSCOUT.</p>
-        <a href="https://eth.blockscout.com?ref=C9JLL4" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1871281670109954466" class="btn btn-success">View Steps</a>
-      </div>
+    <!-- Landing Page -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4 mb-4">Discover Latest Airdrops</h1>
+            <a href="#projects" class="btn btn-light btn-lg">Explore Projects</a>
+        </div>
     </div>
 
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">FRACTIONAL AI</h2>
-        <p class="card-text">Earn rewards by participating in FRACTIONAL AI.</p>
-        <a href="https://dapp.fractionai.xyz?referral=6ADF281E" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1881788877725368682" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
+    <!-- Projects Page -->
+    <div class="container py-5" id="projects">
+        <!-- Testnet Category -->
+        <div class="category-banner" id="testnet">
+            <h2><i class="fas fa-microchip me-2"></i> Testnet Projects</h2>
+        </div>
+        <div class="row">
+            <!-- Project Card -->
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project1.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>MONAD TESTNET</h4>
+                    <p class="card-text">Earn rewards by participating in MONAD.</p>
+                    <a href="https://x.com/kroweskynx/status/1886355259955577025" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
 
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">SAHARA AI</h2>
-        <p class="card-text">Earn rewards by participating in SAHARA AI.</p>
-        <a href="https://legends.saharalabs.ai/?code=Y7ES0Y" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1884957405252845861" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
+            <!-- Another Project -->
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>PLAZA FINACE</h4>
+                    <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div>
 
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">TANSSI NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in TANSSI NETWORK.</p>
-        <a href="https://t.me/tanssi_mini_bot/tanssi?startapp=eyJzbHVnIjoiYjU0NmZlODAtZDU2Zi00ZjdjLWE2YTAtZDU0OTk5ZmExNTJmIiwiY2xhbklkIjoxMDE3fQ==" class="btn btn-primary mb-2">Referral Referral Link</a> 
-          <a href="lfd.tanssi.network" class="btn btn-primary mb-2">Website Referral Link</a>
-        <a href="https://x.com/InfluencerDee/status/1885386601221480509" class="btn btn-success">View Steps</a>
+        <div class="col-md-4">
+          <div class="project-card">
+              <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+              <h4>BLOUCKSCOUT</h4>
+              <p class="card-text">Earn rewards by participating in BLOCKSCOUT.</p>
+              <a href="https://eth.blockscout.com?ref=C9JLL4" class="btn btn-primary mb-2">Referrals Link</a> 
+              <a href="https://x.com/InfluencerDee/status/1871281670109954466" class="btn btn-success">View Steps</a>
+          </div>
       </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">ASSISTER AI</h2>
-        <p class="card-text">Earn rewards by participating in ASSISTER.</p>
-        <a href="https://build.assisterr.ai/?ref=676e846ff15c39e589669b06" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/ahmanikdu47/status/1884640667873488986" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">HUMANITY PROTOCOL</h2>
-        <p class="card-text">Earn rewards by participating in HUMANITY PROTOCOL.</p>
-        <a href="https://testnet.humanity.org/login?ref=lastborn04" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1841484647240269937" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">CHAINBASE</h2>
-        <p class="card-text">Earn rewards by participating in CHAINBASE.</p>
-        <a href="https://genesis.chainbase.com/referral?referral_code=ZSPROESWT" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1844049856803037313" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">EXPCHAIN</h2>
-        <p class="card-text">Earn rewards by participating in EXPCHAIN.</p>
-        <a href="https://bridge.expchain.ai/bridge" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/fabunchain/status/1884920785086656858" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">HYPERLEND</h2>
-        <p class="card-text">Earn rewards by participating in HYPERLEND.</p>
-        <a href="https://testnet.hyperlend.finance/?ref=LASTBORN04" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/0xjayn3/status/1868914024563589441" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">ATLAS NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in ATLAS NETWORK.</p>
-        <a href="https://testnet.atlasnetwork.xyz/refer/kbDKDNn" class="btn btn-primary mb-2">Referral Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1877768725660615054" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">INITIA PROTOCOL</h2>
-        <p class="card-text">Earn rewards by participating in INITIA PROTOCOL.</p>
-        <a href="https://app.testnet.initia.xyz/" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/Sava_FUTMB/status/1800995389497352581" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">TAKER PROTOCOL</h2>
-        <p class="card-text">Earn rewards by participating in TAKER PROTOCOL.</p>
-        <a href="https://earn.taker.xyz?start=3ATJE" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1876341976930414944" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">ARCH NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in TAKER PROTOCOL.</p>
-        <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card testnet">
-      <div class="card-body">
-        <h2 class="card-title">KGEN</h2>
-        <p class="card-text">Earn rewards by participating in KGEN.</p>
-        <body>KGEN REF CODE - APELUP</body> 
-        <a href="https://x.com/Cosmos_Tic/status/1886433315172839840" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <!-- DEPIN-->
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">GRASS SEASON 2</h2>
-        <p class="card-text">Earn rewards by participating in GRASS.</p>
-        <a href="https://app.getgrass.io/register/?referralCode=Skk21QCzBmgcmsR" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/mr_cbillionaire/status/1855141235658203442" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">BLOCKMESH</h2>
-        <p class="card-text">Earn rewards by participating in BLOCKMESH.</p>
-        <a href="https://app.blockmesh.xyz/register?invite_code=lastborn04" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1857464175234085047" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">NAORIS PROTOCOL</h2>
-        <p class="card-text">Earn rewards by participating in NAORIS PROTOCOL.</p>
-        <a href="https://naorisprotocol.network/testnet/?referralCode=laK3BauisNTXBV8P" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1886340739761586340" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">DISTRIBUTE AI</h2>
-        <p class="card-text">Earn rewards by participating in DISTRIBUTE AI.</p>
-        <a href="https://r.distribute.ai/lastborn04" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1857464156489719845" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">BLESS NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in BLESS NETWORK.</p>
-        <a href="https://bless.network/dashboard?ref=KPARIW" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1857464161984213089" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">DAWN NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in DAWN NETWORK.</p>
-        <body>Dawn REF CODE - etmgto90</body> 
-        <a href="https://x.com/InfluencerDee/status/1876579359206584409" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">FUNCTOR NODE</h2>
-        <p class="card-text">Earn rewards by participating in FUNCTOR NODE.</p>
-        <a href="https://node.securitylabs.xyz/?from=extension&type=signin&referralCode=cm4yg85p28ztomi1bk3g5ld0q" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1869034793452593642" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">GRADIENT</h2>
-        <p class="card-text">Earn rewards by participating in GRADIENT.</p>
-        <a href="https://app.gradient.network/signup?code=HZJQFZ" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1835691155318604007" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">OPEN LOOP</h2>
-        <p class="card-text">Earn rewards by participating in OPEN LOOP.</p>
-        <a href="https://openloop.so/auth/register?ref=ol10268fe9" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/GACryptoO/status/1869771164332994701" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">TENEO COMMUNITY NODE</h2>
-        <p class="card-text">Earn rewards by participating in TENEO COMMUNITY NODE.</p>
-        <body>TENEO REF CODE - SJNPI</body> 
-        <a href="https://x.com/InfluencerDee/status/1876579359206584409" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">KAISAR NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in KAISAR NETWORK.</p>
-        <a href="https://zero.kaisar.io/register?ref=mCFCMa538" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1869034815388807406" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">NODEPAY SEASON 2</h2>
-        <p class="card-text">Earn rewards by participating in NODEPAY.</p>
-        <a href="https://app.nodepay.ai/register?ref=mLRPvVDIstRycY7" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/ManiUrstruly/status/1864369684608344231" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">LAYER EDGE</h2>
-        <p class="card-text">Earn rewards by participating in LAYER EDGE.</p>
-        <a href="https://dashboard.layeredge.io/register?invite_code=H9nTwo5I" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/InfluencerDee/status/1882775443797086697" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">TOGGLE</h2>
-        <p class="card-text">Earn rewards by participating in TOGGLE.</p>
-        <a href="https://toggle.pro/sign-up/8e10646a-6819-479f-a0ed-972d765abbf3" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/IamOluKT/status/1884751608862405000" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">MY GATE NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in MYGATE NETWORK.</p>
-        <a href="https://app.mygate.network/login?code=SrYk2E" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/HottieBabeGem/status/1874932660050841717" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">OPEN LEDGER</h2>
-        <p class="card-text">Earn rewards by participating in OPEN LEDGER.</p>
-        <a href="https://testnet.openledger.xyz/?referral_code=vlkaxurzvq" class="btn btn-primary mb-2">Referral Link</a> 
-        <a href="https://x.com/farmercist_eth/status/1879233494611534000" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">OPEN LAYER</h2>
-        <p class="card-text">Earn rewards by participating in OPEN LAYER.</p>
-        <body>OPEN LAYER REF CODE - DAVEG6</body> 
-        <a href="https://x.com/farmercist_eth/status/1879233494611534000" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">GRID NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in GRID NETWORK.</p>
-        <a href="https://sso.getgrid.ai/registration?referral_code=50a9e7c" class="btn btn-primary mb-2">Referral Link</a> 
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">GAIA NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in GAIA.</p>
-        <a href="https://gaianet.ai/reward?invite_code=RcKHZF" class="btn btn-primary mb-2">Referral Link</a>
-        <a href="https://x.com/InfluencerDee/status/1879918277381775760" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card depin">
-      <div class="card-body">
-        <h2 class="card-title">HAUST NETWORK</h2>
-        <p class="card-text">Earn rewards by participating in HAUST.</p>
-        <a href="https://x.com/MaransCrypto/status/1886782522182524983" class="btn btn-success">View Steps</a>
-      </div>
-    </div>
-
-    <!-- Telegram -->
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">TINY VERSE</h2>
-        <p class="card-text">Earn rewards by participating in TINY VERSE.</p>
-        <a href="https://t.me/tverse?startapp=gift-EsU6UFbreSTT" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">MIDAS YIELDER</h2>
-        <p class="card-text">Earn rewards by participating in MIDAS YIELDER.</p>
-        <a href="https://t.me/MidasRWA_bot/app?startapp=ref_a1ecd4f4-af5d-4b98-8bd9-0362f22c95cd" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">HOLD HIGH</h2>
-        <p class="card-text">Earn rewards by participating in HOLD HIGH.</p>
-        <a href="https://t.me/cube_hodl_bot/app?startapp=cube2dBMmn" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">KLINK FINANCE</h2>
-        <p class="card-text">Earn rewards by participating in KLINK FINANCE.</p>
-        <a href="https://t.me/KlinkFinanceBot?start=6897830956" class="btn btn-success">Referral Link</a>
-        <a href="https://join.klinkfinance.com/PT65mJo5BQb" class="btn btn-success">APP</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">HI PIN</h2>
-        <p class="card-text">Earn rewards by participating in HI PIN.</p>
-        <a href="https://t.me/hi_PIN_bot/app?startapp=p6GHTpP" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">DUROV CAPS</h2>
-        <p class="card-text">Earn rewards by participating in DUROV CAPS.</p>
-        <a href="https://t.me/DurovCapsBot/caps?startapp=6897830956" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">SIGMA</h2>
-        <p class="card-text">Earn rewards by participating in SIGMA.</p>
-        <a href="https://t.me/sigmatonbot/app?startapp=ref_362sgfg" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">UXUY WALLET</h2>
-        <p class="card-text">Earn rewards by participating in UXUY WALLET.</p>
-        <a href="https://t.me/UXUYbot/app?startapp=A_6897830956_inviteEarn" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">VOOI APP</h2>
-        <p class="card-text">Earn rewards by participating in VOOI APP.</p>
-        <a href="https://t.me/VooiAppBot/vooi?startapp=frenIDxQJj4Vz" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">DRFT PARTY/h2>
-        <p class="card-text">Earn rewards by participating in DRFT PARTY.</p>
-        <a href="https://t.me/drft_party_bot/game?startapp=6897830956" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">TONxDAO</h2>
-        <p class="card-text">Earn rewards by participating in TONxDAO.</p>
-        <a href="https://t.me/tonxdao_bot?start=ref_6897830956" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">BOINKERS</h2>
-        <p class="card-text">Earn rewards by participating in BOINKERS.</p>
-        <a href="https://t.me/boinker_bot/boinkapp?startapp=boink6897830956" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">POCKET FI</h2>
-        <p class="card-text">Earn rewards by participating in POCKET FI.</p>
-        <a href="https://t.me/pocketfi_bot/Mining?startapp=6897830956" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-
-    <div class="card mb-3 airdrop-card telegram">
-      <div class="card-body">
-        <h2 class="card-title">BLUM/h2>
-        <p class="card-text">Earn rewards by participating in BLUM.</p>
-        <a href="https://t.me/blum/app?startapp=ref_45KNCCFxud" class="btn btn-success">Referral Link</a>
-      </div>
-    </div>
-    <!-- Testnet Tokens Section -->
-    <div class="container mt-5">
-      <h2 class="text-center mb-4">Get Free Testnet Tokens</h2>
-      <p class="text-center">Need testnet tokens to interact with blockchain projects? Get them here:</p>
-
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <ul class="list-group">
-            <li class="list-group-item">
-            <li class="list-group-item">
-              <a href="https://t.me/TestcoinFaucetNewBot" target="_blank">Testcoin Faucet</a>
-            </li>
-            <li class="list-group-item">
-              <a href="https://t.me/faucet_trade_bot" target="_blank">Binance Smart Chain Faucet</a>
-            </li>
-          </ul>
-      </div>
-    </div>
-
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>FRACTIONAL AI</h4>
+                    <p class="card-text">Earn rewards by participating in FRACTIONAL AI.</p>
+                    <a href="https://dapp.fractionai.xyz?referral=6ADF281E" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1881788877725368682" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div>
 
-  <!-- Filtering Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const navReferral Links = document.querySelectorAll(".nav-Referral Link");
-      const cards = document.querySelectorAll(".airdrop-card");
+        <div class="col-md-4">
+          <div class="project-card">
+              <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+              <h4> TANSSI NETWORK</h4>
+              <p class="card-text">Earn rewards by participating in TANSSI NETWORK.</p>
+        <a href="https://t.me/tanssi_mini_bot/tanssi?startapp=eyJzbHVnIjoiYjU0NmZlODAtZDU2Zi00ZjdjLWE2YTAtZDU0OTk5ZmExNTJmIiwiY2xhbklkIjoxMDE3fQ==" class="btn btn-primary mb-2">Referrals Link</a> 
+          <a href="lfd.tanssi.network" class="btn btn-primary mb-2">Website Referrals Link</a>
+        <a href="https://x.com/InfluencerDee/status/1885386601221480509" class="btn btn-success">View Steps</a>
+          </div>
+      </div>
+  </div>
 
-      navReferral Links.forEach(Referral Link => {
-        Referral Link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const filter = this.getAttribute("data-filter");
+    <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>PLAZA FINACE</h4>
+                    <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div> 
 
-          cards.forEach(card => {
-            if (filter === "all" || card.classList.contains(filter)) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
+        <div class="col-md-4">
+          <div class="project-card">
+              <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+              <h4>PLAZA FINACE</h4>
+              <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+              <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+              <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+          </div>
+      </div>
+  </div> 
 
-          navReferral Links.forEach(Referral Link => Referral Link.classList.remove("active"));
-          this.classList.add("active");
+    <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>PLAZA FINACE</h4>
+                    <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div> 
+
+        <div class="col-md-4">
+          <div class="project-card">
+              <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+              <h4>PLAZA FINACE</h4>
+              <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+              <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+              <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+          </div>
+      </div>
+  </div>
+
+    <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>PLAZA FINACE</h4>
+                    <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div> 
+
+        <div class="col-md-4">
+          <div class="project-card">
+              <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+              <h4>PLAZA FINACE</h4>
+              <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+              <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+              <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+          </div>
+      </div>
+  </div>
+
+    <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>PLAZA FINACE</h4>
+                    <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card">
+              <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+              <h4>PLAZA FINACE</h4>
+              <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+              <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+              <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+          </div>
+      </div>
+  </div> 
+
+    <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>PLAZA FINACE</h4>
+                    <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div>
+
+          <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>PLAZA FINACE</h4>
+                    <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="project-card">
+              <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+              <h4>PLAZA FINACE</h4>
+              <p class="card-text">Earn rewards by participating in PLAZA FINANCE.</p>
+              <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary mb-2">Referrals Link</a> 
+              <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success">View Steps</a>
+          </div>
+      </div>
+  </div>
+        <!-- DePIN Category -->
+        <div class="category-banner" id="depin">
+            <h2><i class="fas fa-satellite-dish me-2"></i> DePIN Projects</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="project-card">
+                    <img src="assets/icons/depin1.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+                    <h4>DePIN Project</h4>
+                    <p>Earn rewards by participating in DePIN Project.</p>
+                    <a href="https://your-referral-link.com" class="btn btn-primary mb-2">Referral Link</a>
+                    <a href="https://your-view-steps-link.com" class="btn btn-success">View Steps</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle btn btn-primary rounded-circle p-3">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.setAttribute('data-theme',
+            document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
         });
-      });
-    });
-  </script>
 
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
