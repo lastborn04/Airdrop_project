@@ -16,7 +16,7 @@
 
         [data-theme="dark"] {
             --primary-color: #818cf8;
-            --secondary-color: #fbbf24;
+            --secondary-color: #ffbc14;
             --background: #0f172a;
             --text-color: #f8fafc;
         }
@@ -27,185 +27,541 @@
             transition: all 0.3s ease;
         }
 
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
         .project-card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 16px;
-            padding: 1rem;
+            padding: 1.5rem;
             margin: 1rem 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
         }
 
-        .project-header {
-            cursor: pointer;
-            transition: background-color 0.2s ease;
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-bar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .category-banner {
             padding: 1rem;
             border-radius: 12px;
-        }
-
-        .project-header:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .project-expandable {
-            transition: all 0.3s ease;
-        }
-
-        .project-details {
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 0 0 12px 12px;
-        }
-
-        .referral-box {
-            background: rgba(99, 102, 241, 0.1);
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        @media (max-width: 768px) {
-            .project-card {
-                margin: 0.5rem 0;
-            }
-            
-            .project-header {
-                padding: 0.75rem;
-            }
-            
-            .referral-box {
-                margin-top: 0.5rem;
-            }
-        }
-
-        .copy-referral:active {
-            transform: scale(0.95);
+            margin: 2rem 0;
+            color: white;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="nav-bar navbar navbar-expand-lg sticky-top" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-rocket"></i> AirdropHub
-            </a>
+            <a class="navbar-brand text-primary" href="#">AirdropHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#testnet"><i class="fas fa-network-wired"></i> Testnet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#depin"><i class="fas fa-microchip"></i> DePIN</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#telegram"><i class="fab fa-telegram"></i> Telegram</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testnet">Testnet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depin">DePIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#telegram">Telegram</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container py-4">
-        <!-- Testnet Section -->
-        <div class="category-banner mb-4" id="testnet">
-            <h2 class="text-center mb-4"><i class="fas fa-network-wired me-2"></i>Testnet Projects</h2>
-            
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-header" data-bs-toggle="collapse" data-bs-target="#project1Details">
-                    <div class="row align-items-center">
-                        <div class="col-md-2 text-center mb-3 mb-md-0">
-                            <img src="placeholder.png" alt="Project 1" class="img-fluid" style="width: 80px;">
-                        </div>
-                        <div class="col-md-8">
-                            <h4>StarkNet</h4>
-                            <p class="text-muted">Layer 2 scaling solution for Ethereum</p>
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-expandable collapse" id="project1Details">
-                    <div class="project-details">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5><i class="fas fa-tasks me-2"></i>Steps to Participate</h5>
-                                <ol class="mt-3">
-                                    <li>Install Argent X wallet</li>
-                                    <li>Bridge ETH to StarkNet</li>
-                                    <li>Complete 5+ transactions</li>
-                                    <li>Interact with dApps</li>
-                                </ol>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="referral-box">
-                                    <h6 class="mb-3"><i class="fas fa-handshake me-2"></i>Referral Program</h6>
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control form-control-sm" 
-                                            value="https://starknet.io?ref=airdrophub123" 
-                                            id="refLink1" readonly>
-                                        <button class="btn btn-primary btn-sm copy-referral" 
-                                            data-link="https://starknet.io?ref=airdrophub123">
-                                            <i class="fas fa-copy"></i>
-                                        </button>
-                                    </div>
-                                    <small class="text-muted">Earn 15% bonus using this link</small>
-                                </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">
-                                    <i class="fas fa-graduation-cap"></i> Full Guide
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Landing Page -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4 mb-4">Discover Latest Airdrops</h1>
+            <a href="#projects" class="btn btn-light btn-lg">Explore Projects</a>
+        </div>
+    </div>
+
+    <!-- Projects Page -->
+    <div class="container py-5" id="projects">
+        <!-- Testnet Category -->
+        <div class="category-banner bg-primary" id="testnet">
+            <h2><i class="fas fa-satellite-dish me-2"></i> Testnet Projects</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>MONAD TESTNET</h4>
+                    <p>Earn Real Crypto rewards by participating in MONAD.</p>
+                    <a href="https://x.com/kroweskynx/status/1886355259955577025" class="btn btn-success w-100 mb-2">Steps</a>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-header" data-bs-toggle="collapse" data-bs-target="#project2Details">
-                    <div class="row align-items-center">
-                        <div class="col-md-2 text-center mb-3 mb-md-0">
-                            <img src="placeholder.png" alt="Project 2" class="img-fluid" style="width: 80px;">
-                        </div>
-                        <div class="col-md-8">
-                            <h4>zkSync Era</h4>
-                            <p class="text-muted">ZK-Rollup with full EVM compatibility</p>
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>PLAZA FINANCE</h4>
+                    <p>Earn Real Crypto rewards by participating in PLAZA FINANCE.</p>
+                    <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary w-100 mb-2">Referrals Link</a> 
+                    <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success w-100">Steps</a>
                 </div>
-                
-                <div class="project-expandable collapse" id="project2Details">
-                    <div class="project-details">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h5><i class="fas fa-tasks me-2"></i>Steps to Participate</h5>
-                                <ol class="mt-3">
-                                    <li>Bridge ETH to zkSync</li>
-                                    <li>Swap tokens on SyncSwap</li>
-                                    <li>Mint NFT on Mint Square</li>
-                                    <li>Weekly activity required</li>
-                                </ol>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="referral-box">
-                                    <h6 class="mb-3"><i class="fas fa-handshake me-2"></i>Referral Program</h6>
-                                    <div class="input-group mb-2">
-                                        <input type="text" class="form-control form-control-sm" 
-                                            value="https://zksync.io?ref=airdrophub456" 
-                                            id="refLink2" readonly>
-                                        <button class="btn btn-primary btn-sm copy-referral" 
-                                            data-link="https://zksync.io?ref=airdrophub456">
-                                            <i class="fas fa-copy"></i>
-                                        </button>
-                                    </div>
-                                    <small class="text-muted">Earn 10% bonus using this link</small>
-                                </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">
-                                    <i class="fas fa-graduation-cap"></i> Full Guide
-                                </a>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>BLOUCKSCOUT</h4>
+                    <p>Earn Real Crypto rewards by participating in BLOCKSCOUT.</p>
+                    <a href="https://eth.blockscout.com?ref=C9JLL4" class="btn btn-primary w-100 mb-2">Referrals Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1871281670109954466" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>FRACTIONAL AI</h4>
+                    <p>Earn Real Crypto rewards by participating in FRACTIONAL AI.</p>
+                    <a href="https://dapp.fractionai.xyz?referral=6ADF281E" class="btn btn-primary w-100 mb-2">Referrals Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1881788877725368682" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>TANSSI NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in TANSSI NETWORK.</p>
+                    <a href="https://t.me/tanssi_mini_bot/tanssi?startapp=eyJzbHVnIjoiYjU0NmZlODAtZDU2Zi00ZjdjLWE2YTAtZDU0OTk5ZmExNTJmIiwiY2xhbklkIjoxMDE3fQ==" class="btn btn-primary w-100 mb-2">Referrals Link</a> 
+                    <a href="https://lfd.tanssi.network" class="btn btn-primary w-100 mb-2">Website Link</a>
+                    <a href="https://x.com/InfluencerDee/status/1885386601221480509" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>ASSISTER</h4>
+                    <p>Earn Real Crypto rewards by participating in ASSISTER.</p>
+                    <a href="https://build.assisterr.ai/?ref=676e846ff15c39e589669b06" class="btn btn-primary w-100 mb-2">Referrals Link</a> 
+                    <a href="https://x.com/ahmanikdu47/status/1884640667873488986" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>HUMANITY PROTOCOL</h4>
+                    <p>Earn Real Crypto rewards by participating in HUMANITY PROTOCOL.</p>
+                    <a href="https://testnet.humanity.org/login?ref=lastborn04" class="btn btn-primary w-100 mb-2">Referrals Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1841484647240269937" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>CHAINBASE</h4>
+                    <p>Earn Real Crypto rewards by participating in CHAINBASE.</p>
+                    <a href="https://genesis.chainbase.com/referral?referral_code=ZSPROESWT" class="btn btn-primary w-100 mb-2">Referrals Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1844049856803037313" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>EXPCHAIN</h4>
+                    <p>Earn Real Crypto rewards by participating in EXPCHAIN.</p>
+                    <a href="https://bridge.expchain.ai/bridge" class="btn btn-primary w-100 mb-2">Bridge Link</a> 
+                    <a href="https://faucet.expchain.ai/" class="btn btn-primary w-100 mb-2">Faucet Link</a>
+                    <a href="https://x.com/fabunchain/status/1884920785086656858" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>HYPERLEND</h4>
+                    <p>Earn Real Crypto rewards by participating in HYPERLEND.</p>
+                    <a href="https://testnet.hyperlend.finance/?ref=LASTBORN04" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/0xjayn3/status/1868914024563589441" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>ATLAS NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in ATLAS NETWORK.</p>
+                    <a href="https://testnet.atlasnetwork.xyz/refer/kbDKDNn" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1877768725660615054" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>INITIA PROTOCOL</h4>
+                    <p>Earn Real Crypto rewards by participating in INITIA PROTOCOL.</p>
+                    <a href="https://app.testnet.initia.xyz/" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/Sava_FUTMB/status/1800995389497352581" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>TAKER PROTOCOL</h4>
+                    <p>Earn Real Crypto rewards by participating in TAKER PROTOCOL.</p>
+                    <a href="https://earn.taker.xyz?start=3ATJE" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1876341976930414944" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>ARCH NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in ARCH NETWORK.</p>
+                    <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>KGEN</h4>
+                    <p>Earn Real Crypto rewards by participating in KGEN.</p>
+                    <p class="text-muted">REF CODE - APELUP</p>
+                    <a href="https://x.com/Cosmos_Tic/status/1886433315172839840" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- DePIN Category -->
+        <div class="category-banner bg-success" id="depin">
+            <h2><i class="fas fa-satellite-dish me-2"></i> DePIN Projects</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>GRASS</h4>
+                    <p>Earn Real Crypto rewards by participating in GRASS.</p>
+                    <a href="https://app.getgrass.io/register/?referralCode=Skk21QCzBmgcmsR" class="btn btn-primary w-100 mb-2">Referral Link</a>
+                    <a href="https://x.com/mr_cbillionaire/status/1855141235658203442" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>BLOCK MESH</h4>
+                    <p>Earn Real Crypto rewards by participating in BLOCK MESH.</p>
+                    <a href="https://app.blockmesh.xyz/register?invite_code=lastborn04" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1857464175234085047" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>NAORIS PROTOCOL</h4>
+                    <p>Earn Real Crypto rewards by participating in NAORIS PROTOCOL.</p>
+                    <a href="https://naorisprotocol.network/testnet/?referralCode=laK3BauisNTXBV8P" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1886340739761586340" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>DISTRIBUTE AI</h4>
+                    <p>Earn Real Crypto rewards by participating in DISTRIBUTE AI.</p>
+                    <a href="https://r.distribute.ai/lastborn04" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1857464156489719845" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>BLESS NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in BLESS NETWORK.</p>
+                    <a href="https://bless.network/dashboard?ref=KPARIW" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1857464161984213089" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>DAWN NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in DAWN NETWORK.</p>
+                    <p class="text-muted">REF CODE - etmgto90</p>
+                    <a href="https://x.com/InfluencerDee/status/1876579359206584409" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>FUNCTOR NODE</h4>
+                    <p>Earn Real Crypto rewards by participating in FUNCTOR NODE.</p>
+                    <a href="https://node.securitylabs.xyz/?from=extension&type=signin&referralCode=cm4yg85p28ztomi1bk3g5ld0q" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1869034793452593642" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>GRADIENT</h4>
+                    <p>Earn Real Crypto rewards by participating in GRADIENT.</p>
+                    <a href="https://app.gradient.network/signup?code=HZJQFZ" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1835691155318604007" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>OPEN LOOP</h4>
+                    <p>Earn Real Crypto rewards by participating in OPEN LOOP.</p>
+                    <a href="https://openloop.so/auth/register?ref=ol10268fe9" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/GACryptoO/status/1869771164332994701" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>TENEO</h4>
+                    <p>Earn Real Crypto rewards by participating in TENEO.</p>
+                    <p class="text-muted">REF CODE - SJNPI</p>
+                    <a href="https://x.com/InfluencerDee/status/1876579359206584409" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>KAISAR NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in KAISAR NETWORK.</p>
+                    <a href="https://zero.kaisar.io/register?ref=mCFCMa538" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1869034815388807406" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>NODEPAY SEASON 2</h4>
+                    <p>Earn Real Crypto rewards by participating in NODEPAY SEASON 2.</p>
+                    <a href="https://app.nodepay.ai/register?ref=mLRPvVDIstRycY7" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/ManiUrstruly/status/1864369684608344231" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>LAYEREDGE</h4>
+                    <p>Earn Real Crypto rewards by participating in LAYEREDGE.</p>
+                    <a href="https://dashboard.layeredge.io/register?invite_code=H9nTwo5I" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1882775443797086697" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>TOGGLE</h4>
+                    <p>Earn Real Crypto rewards by participating in TOGGLE.</p>
+                    <a href="https://toggle.pro/sign-up/8e10646a-6819-479f-a0ed-972d765abbf3" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/IamOluKT/status/1884751608862405000" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>MY GATE NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in MY GATE NETWORK.</p>
+                    <a href="https://app.mygate.network/login?code=SrYk2E" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/HottieBabeGem/status/1874932660050841717" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>OPEN LEDGER</h4>
+                    <p>Earn Real Crypto rewards by participating in OPEN LEDGER.</p>
+                    <a href="https://testnet.openledger.xyz/?referral_code=vlkaxurzvq" class="btn btn-primary w-100 mb-2">Referral Link</a> 
+                    <a href="https://x.com/farmercist_eth/status/1879233494611534000" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>OPEN LAYER</h4>
+                    <p>Earn Real Crypto rewards by participating in OPEN LAYER.</p>
+                    <p class="text-muted">REF CODE - DAVEG6</p>
+                    <a href="https://x.com/farmercist_eth/status/1879233494611534000" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>GRID</h4>
+                    <p>Earn Real Crypto rewards by participating in GRID.</p>
+                    <a href="https://sso.getgrid.ai/registration?referral_code=50a9e7c" class="btn btn-primary w-100 mb-2">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>GAIA NET</h4>
+                    <p>Earn Real Crypto rewards by participating in GAIA NET.</p>
+                    <a href="https://gaianet.ai/reward?invite_code=RcKHZF" class="btn btn-primary w-100 mb-2">Referral Link</a>
+                    <a href="https://x.com/InfluencerDee/status/1879918277381775760" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>HAUST NETWORK</h4>
+                    <p>Earn Real Crypto rewards by participating in HAUST NETWORK.</p>
+                    <a href="https://faucet-test.haust.network/" class="btn btn-primary w-100 mb-2">Faucet Link</a>
+                    <a href="https://petridish.haust.ntwork" class="btn btn-primary w-100 mb-2">MINT NFT</a>
+                    <a href="https://dex.testnet.haust.app/#/send" class="btn btn-primary w-100 mb-2">SEND TEST TOKENS</a>
+                    <a href="https://x.com/MaransCrypto/status/1886782522182524983" class="btn btn-success w-100">Steps</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Telegram Category -->
+        <div class="category-banner bg-info" id="telegram">
+            <h2><i class="fas fa-comment-dots me-2"></i> Telegram</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>TINY VERSE</h4>
+                    <p>Earn Real Crypto rewards by participating in TINY VERSE.</p>
+                    <a href="https://t.me/tverse?startapp=gift-EsU6UFbreSTT" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>MIDAS YIELDER</h4>
+                    <p>Earn Real Crypto rewards by participating in MIDAS YIELDER.</p>
+                    <a href="https://t.me/MidasRWA_bot/app?startapp=ref_a1ecd4f4-af5d-4b98-8bd9-0362f22c95cd" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>HODL HIGH</h4>
+                    <p>Earn Real Crypto rewards by participating in HODL HIGH.</p>
+                    <a href="https://t.me/cube_hodl_bot/app?startapp=cube2dBMmn" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>KLINK FINANCE</h4>
+                    <p>Earn Real Crypto rewards by participating in KLINK FINANCE.</p>
+                    <a href="https://t.me/KlinkFinanceBot?start=6897830956" class="btn btn-primary w-100 mb-2">Referral Link</a>
+                    <a href="https://join.klinkfinance.com/PT65mJo5BQb" class="btn btn-success w-100">APP</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>HI PIN</h4>
+                    <p>Earn Real Crypto rewards by participating in HI PIN.</p>
+                    <a href="https://t.me/hi_PIN_bot/app?startapp=p6GHTpP" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>DUROV CAPS</h4>
+                    <p>Earn Real Crypto rewards by participating in DUROV CAPS.</p>
+                    <a href="https://t.me/DurovCapsBot/caps?startapp=6897830956" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>SIGMA</h4>
+                    <p>Earn Real Crypto rewards by participating in SIGMA.</p>
+                    <a href="https://t.me/sigmatonbot/app?startapp=ref_362sgfg" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>UXUY WALLET</h4>
+                    <p>Earn Real Crypto rewards by participating in UXUY WALLET.</p>
+                    <a href="https://t.me/UXUYbot/app?startapp=A_6897830956_inviteEarn" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>VOOI APP</h4>
+                    <p>Earn Real Crypto rewards by participating in VOOI APP.</p>
+                    <a href="https://t.me/VooiAppBot/vooi?startapp=frenIDxQJj4Vz" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>DRFT PARTY</h4>
+                    <p>Earn Real Crypto rewards by participating in DRFT PARTY.</p>
+                    <a href="https://t.me/drft_party_bot/game?startapp=6897830956F" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>TONxDAO</h4>
+                    <p>Earn Real Crypto rewards by participating in TONxDAO.</p>
+                    <a href="https://t.me/tonxdao_bot?start=ref_6897830956" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>BOINKERS</h4>
+                    <p>Earn Real Crypto rewards by participating in BOINKERS.</p>
+                    <a href="https://t.me/boinker_bot/boinkapp?startapp=boink6897830956" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>POCKET FI</h4>
+                    <p>Earn Real Crypto rewards by participating in POCKET FI.</p>
+                    <a href="https://t.me/pocketfi_bot/Mining?startapp=6897830956" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <h4>BLUM</h4>
+                    <p>Earn Real Crypto rewards by participating in BLUM.</p>
+                    <a href="https://t.me/blum/app?startapp=ref_45KNCCFxudF" class="btn btn-primary w-100">Referral Link</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testnet Tokens Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Get Free Testnet Tokens</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <a href="https://t.me/TestcoinFaucetNewBot" target="_blank">Testcoin Faucet</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="https://t.me/faucet_trade_bot" target="_blank">Faucet Trade</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -214,47 +570,30 @@
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Theme Toggle -->
+    <button class="theme-toggle btn btn-primary rounded-circle p-3">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Dropdown Management
-        document.querySelectorAll('.project-header').forEach(header => {
-            header.addEventListener('show.bs.collapse', () => {
-                header.querySelector('i').classList.replace('fa-chevron-down', 'fa-chevron-up');
-            });
-            
-            header.addEventListener('hide.bs.collapse', () => {
-                header.querySelector('i').classList.replace('fa-chevron-up', 'fa-chevron-down');
-            });
+        // Dark Mode Toggle
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            document.body.setAttribute('data-theme', 
+            document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
         });
 
-        // Close other dropdowns when opening new one
-        const collapses = document.querySelectorAll('.collapse');
-        collapses.forEach(collapse => {
-            collapse.addEventListener('show.bs.collapse', () => {
-                document.querySelectorAll('.collapse.show').forEach(openCollapse => {
-                    if(openCollapse !== collapse) {
-                        bootstrap.Collapse.getInstance(openCollapse).hide();
-                    }
-                });
-            });
-        });
-
-        // Copy Referral Links
-        document.querySelectorAll('.copy-referral').forEach(button => {
-            button.addEventListener('click', function() {
-                const link = this.dataset.link;
-                navigator.clipboard.writeText(link).then(() => {
-                    const originalHTML = this.innerHTML;
-                    this.innerHTML = '<i class="fas fa-check"></i>';
-                    setTimeout(() => {
-                        this.innerHTML = originalHTML;
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Copy failed:', err);
-                    alert('Failed to copy link. Please try again.');
-                });
-            });
+        // Auto-hide Navbar
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScrollTop = scrollTop;
         });
     </script>
 </body>
