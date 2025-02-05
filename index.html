@@ -81,7 +81,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#testnet">Testnet</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#depin">DePIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depin">DEPIN</a></li>
                     <li class="nav-item"><a class="nav-link" href="#telegram">Telegram</a></li>
                 </ul>
             </div>
@@ -689,11 +689,13 @@
                          class="faucet-logo me-3" alt="Ethereum">
                     <div>
                         <h4>Testcoin Faucet</h4>
+                        <div class="badge bg-success">Get All Test Tokens</div>
                     </div>
                 </div>
-                <div class="faucet-info">
+                    <div class="faucet-info">
                     <p class="text-muted">Claim every 24 hours</p>
-                    <a href="https://t.me/TestcoinFaucetNewBot
+                    <a href="https://t.me/TestcoinFaucetNewBot"
+                        class="btn btn-sm btn-primary"
                        target="_blank">
                        <i class="fas fa-tint me-2"></i>Get all test tokens here....
                     </a>
@@ -712,7 +714,7 @@
                         <div class="badge bg-success">Get All Test Tokens</div>
                     </div>
                 </div>
-                <div class="faucet-info">
+                    <div class="faucet-info">
                     <p class="text-muted">Claim every 24 hours</p>
                     <a href="https://t.me/faucet_trade_bot" 
                        class="btn btn-sm btn-primary" 
@@ -757,9 +759,29 @@
 </style>
 
     <!-- Theme Toggle -->
-    <button class="theme-toggle btn btn-primary rounded-circle p-3">
-        <i class="fas fa-moon"></i>
-    </button>
+<!-- In your HTML -->
+<button class="theme-toggle btn btn-primary rounded-circle">
+    <i class="fas fa-moon"></i>
+</button>
+
+<style>
+    .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-toggle i {
+        font-size: 1.2rem;
+    }
+</style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
