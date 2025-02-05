@@ -38,20 +38,16 @@
         }
 
         .category-banner {
-            background-color: #ff5722; /* Bright orange (change if needed) */
-            padding: 0.7rem 1.2rem; 
-            border-radius: 6px; 
-            margin: 1rem 0; 
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 2rem 0;
             color: white;
-            font-weight: bold;
-            font-size: 1.3rem; 
-            display: inline-block;
-            width: auto;
 }
 
 
 
-        .project-card {
+        .project-card animate-fade-in {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 1.5rem;
@@ -60,7 +56,7 @@
             text-align: center;
         }
 
-        .project-card:hover {
+        .project-card animate-fade-in:hover {
             transform: translateY(-5px);
         }
 
@@ -96,7 +92,7 @@
     </nav>
 
     <!-- Landing Page -->
-    <div class="hero-section">
+    <div class="hero-section animate-fade-in">
         <div class="hero-content">
             <h1 class="display-4 mb-4">Discover Latest Airdrops</h1>
             <a href="#projects" class="btn btn-light btn-lg">Explore Projects</a>
@@ -107,226 +103,195 @@
     <div class="container py-5" id="projects">
         <!-- Testnet Category -->
         <div class="category-banner" id="testnet">
-            <h2 class="mb-0"><i class="fas fa-microchip me-2"></i> Testnet Projects</h2>
+            <h2"><i class="fas fa-satellite-dish me-2"></i> Testnet Projects</h2>
         </div>
-        <div class="divider">
+        <div class="row">
             <!-- Project Card -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project1.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>MONAD TESTNET</h4>
                     <p>Earn Real Crypto rewards by participatingin MONAD.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://x.com/kroweskynx/status/1886355259955577025" class="btn btn-success w-50">Steps</a>
+                        <a href="https://x.com/kroweskynx/status/1886355259955577025" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>PLAZA FINACE</h4>
                     <p>Earn Real Crypto rewards by participatingin PLAZA FINANCE.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success w-50">Steps</a>
+                        <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>BLOUCKSCOUT</h4>
                     <p>Earn Real Crypto rewards by participatingin BLOCKSCOUT.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://eth.blockscout.com?ref=C9JLL4" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1871281670109954466" class="btn btn-success w-50">Steps</a>
+                        <a href="https://eth.blockscout.com?ref=C9JLL4" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1871281670109954466" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>FRACTIONAL AI</h4>
                     <p>Earn Real Crypto rewards by participatingin FRACTIONAL AI.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://dapp.fractionai.xyz?referral=6ADF281E" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1881788877725368682" class="btn btn-success w-50">Steps</a>
+                        <a href="https://dapp.fractionai.xyz?referral=6ADF281E" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1881788877725368682" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4> TANSSI NETWORK</h4>
                     <p>Earn Real Crypto rewards by participatingin TANSSI NETWORK.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/tanssi_mini_bot/tanssi?startapp=eyJzbHVnIjoiYjU0NmZlODAtZDU2Zi00ZjdjLWE2YTAtZDU0OTk5ZmExNTJmIiwiY2xhbklkIjoxMDE3fQ==" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://lfd.tanssi.network" class="btn btn-success w-50">Website Link</a>
-                        <a href="https://x.com/InfluencerDee/status/1885386601221480509" class="btn btn-success w-50">Steps</a>
+                        <a href="https://t.me/tanssi_mini_bot/tanssi?startapp=eyJzbHVnIjoiYjU0NmZlODAtZDU2Zi00ZjdjLWE2YTAtZDU0OTk5ZmExNTJmIiwiY2xhbklkIjoxMDE3fQ==" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://lfd.tanssi.network" class="btn btn-success w-5">Website Link</a>
+                        <a href="https://x.com/InfluencerDee/status/1885386601221480509" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>PLAZA FINACE</h4>
                     <p>Earn Real Crypto rewards by participatingin PLAZA FINANCE.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success w-50">Steps</a>
+                        <a href="https://testnet.plaza.finance/rewards/NA6WTogWwTT8" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://x.com/Fareatelegrams/status/1876689195877454062" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div> 
 
              <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>ASSISTER</h4>
                     <p>Earn Real Crypto rewards by participatingin ASSISTER.</p>'
-                    <div class="d-flex justify-content-between">
-                        <a href="https://build.assisterr.ai/?ref=676e846ff15c39e589669b06" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://x.com/ahmanikdu47/status/1884640667873488986" class="btn btn-success w-50">Steps</a>
+                        <a href="https://build.assisterr.ai/?ref=676e846ff15c39e589669b06" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://x.com/ahmanikdu47/status/1884640667873488986" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div> 
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>HUMANITY PROTOCOL</h4>
                     <p>Earn Real Crypto rewards by participatingin HUMANITY PROTOCOL.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://testnet.humanity.org/login?ref=lastborn04" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1841484647240269937" class="btn btn-success w-50">Steps</a>
+                        <a href="https://testnet.humanity.org/login?ref=lastborn04" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1841484647240269937" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div> 
              
               <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>CHAINBASE</h4>
                     <p>Earn Real Crypto rewards by participatingin CHAINBASE.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://genesis.chainbase.com/referral?referral_code=ZSPROESWT" class="btn btn-primary w-50 me-2">Referrals Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1844049856803037313" class="btn btn-success w-50">Steps</a>
+                        <a href="https://genesis.chainbase.com/referral?referral_code=ZSPROESWT" class="btn btn-primary w-5 me-2">Referrals Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1844049856803037313" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div>  
             
               <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>>EXPCHAIN</h4>
                     <p>Earn Real Crypto rewards by participatingin EXPCHAIN.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://bridge.expchain.ai/bridge" class="btn btn-primary w-50 me-2">Bridge Link</a> 
-                        <a href="https://faucet.expchain.ai/" class="btn btn-primary w-50 me-2">Faucet Link</a>
-                        <a href="https://x.com/fabunchain/status/1884920785086656858" class="btn btn-success w-50">Steps</a>
+                        <a href="https://bridge.expchain.ai/bridge" class="btn btn-primary w-5 me-2">Bridge Link</a> 
+                        <a href="https://faucet.expchain.ai/" class="btn btn-primary w-5 me-2">Faucet Link</a>
+                        <a href="https://x.com/fabunchain/status/1884920785086656858" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div> 
             
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>HYPERLEND</h4>
                     <p>Earn Real Crypto rewards by participatingin HYPERLEND.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://testnet.hyperlend.finance/?ref=LASTBORN04" class="btn btn-primary w-50 me-2">Referral Link</a> 
-                        <a href="https://x.com/0xjayn3/status/1868914024563589441" class="btn btn-success w-50">Steps</a>
+                        <a href="https://testnet.hyperlend.finance/?ref=LASTBORN04" class="btn btn-primary w-5 me-2">Referral Link</a> 
+                        <a href="https://x.com/0xjayn3/status/1868914024563589441" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div>
                
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>ATLAS NETWORK</h4>
                     <p>Earn Real Crypto rewards by participatingin ATLAS NETWORK.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://testnet.atlasnetwork.xyz/refer/kbDKDNn" class="btn btn-primary w-50 me-2">Referral Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1877768725660615054" class="btn btn-success w-50">Steps</a>
+                        <a href="https://testnet.atlasnetwork.xyz/refer/kbDKDNn" class="btn btn-primary w-5 me-2">Referral Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1877768725660615054" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>INITIA PROTOCOL</h4>
                     <p>Earn Real Crypto rewards by participatingin INITIA PROTOCOL.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://app.testnet.initia.xyz/" class="btn btn-primary w-50 me-2">Referral Link</a> 
-                        <a href="https://x.com/Sava_FUTMB/status/1800995389497352581" class="btn btn-success w-50">Steps</a>
+                        <a href="https://app.testnet.initia.xyz/" class="btn btn-primary w-5 me-2">Referral Link</a> 
+                        <a href="https://x.com/Sava_FUTMB/status/1800995389497352581" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
         </div> 
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>TAKER PROTOCOL</h4>
                     <p>Earn Real Crypto rewards by participatingin TAKER PROTOCOL.</p>
-                    <a href="https://earn.taker.xyz?start=3ATJE" class="btn btn-primary w-50 me-2">Referral Link</a> 
-                    <a href="https://x.com/InfluencerDee/status/1876341976930414944" class="btn btn-success w-50">Steps</a>
+                    <a href="https://earn.taker.xyz?start=3ATJE" class="btn btn-primary w-5 me-2">Referral Link</a> 
+                    <a href="https://x.com/InfluencerDee/status/1876341976930414944" class="btn btn-success w-5">Steps</a>
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>ARCH NETWORK</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary w-50 me-2">Referral Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success w-50">Steps</a>
+                        <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary w-5 me-2">Referral Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success w-5">Steps</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>KGEN</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating KGEN.</p>
-                    <div class="d-flex justify-content-between">
                         <body>KGEN REF CODE - APELUP</body> 
-                        <a href="https://x.com/Cosmos_Tic/status/1886433315172839840" class="btn btn-success w-50">Steps</a>
+                        <a href="https://x.com/Cosmos_Tic/status/1886433315172839840" class="btn btn-success w-5">Steps</a>
                     </div>
                 </div>
             </div>
@@ -336,14 +301,13 @@
         <div class="category-banner" id="depin">
             <h2 class="mb-0"><i class="fas fa-satellite-dish me-2"></i> DEPIN Projects</h2>
         </div>
-        <div class="divider">
-            <div class="col-md-6">
-                <div class="project-card">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <img src="assets/icons/depin1.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
                     <h4>GRASS</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://app.getgrass.io/register/?referralCode=Skk21QCzBmgcmsR" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://app.getgrass.io/register/?referralCode=Skk21QCzBmgcmsR" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/mr_cbillionaire/status/1855141235658203442" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -351,13 +315,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>BLOCK MESH</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://app.blockmesh.xyz/register?invite_code=lastborn04" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://app.blockmesh.xyz/register?invite_code=lastborn04" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1857464175234085047" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -365,13 +327,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>NAORIS PROTOCOL</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://naorisprotocol.network/testnet/?referralCode=laK3BauisNTXBV8P" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://naorisprotocol.network/testnet/?referralCode=laK3BauisNTXBV8P" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1886340739761586340" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -379,13 +339,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>DISTRIBUTE AI</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://r.distribute.ai/lastborn04" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://r.distribute.ai/lastborn04" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1857464156489719845" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -393,13 +351,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>BLESS NETWORK</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://bless.network/dashboard?ref=KPARIW" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://bless.network/dashboard?ref=KPARIW" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1857464161984213089" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -407,12 +363,10 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>DAWN NETWORK</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
                         <body>Dawn REF CODE - etmgto90</body> 
                         <a href="https://x.com/InfluencerDee/status/1876579359206584409" class="btn btn-success w-5">View Steps</a>
                     </div>            
@@ -421,13 +375,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>FUNCTOR NODE</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://node.securitylabs.xyz/?from=extension&type=signin&referralCode=cm4yg85p28ztomi1bk3g5ld0q" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://node.securitylabs.xyz/?from=extension&type=signin&referralCode=cm4yg85p28ztomi1bk3g5ld0q" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1869034793452593642" class="btn btn-success w-5">View Steps</a>                
                     </div>            
                 </div>
@@ -435,13 +387,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>GRADIENT</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://app.gradient.network/signup?code=HZJQFZ" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://app.gradient.network/signup?code=HZJQFZ" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1835691155318604007" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -449,27 +399,23 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>ARCH NETWORK</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary w-50 me-2">Referral Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success w-50">Steps</a>
+                        <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary w-5 me-2">Referral Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success w-5">Steps</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>OPEN LOOP</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://openloop.so/auth/register?ref=ol10268fe9" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://openloop.so/auth/register?ref=ol10268fe9" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/GACryptoO/status/1869771164332994701" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -477,12 +423,10 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>TENEO</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
                         <body>TENEO REF CODE - SJNPI</body> 
                         <a href="https://x.com/InfluencerDee/status/1876579359206584409" class="btn btn-success w-5">View Steps</a>
                     </div>            
@@ -491,13 +435,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>KAISAR NETWORK</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://zero.kaisar.io/register?ref=mCFCMa538" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://zero.kaisar.io/register?ref=mCFCMa538" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1869034815388807406" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -505,13 +447,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>NODEPAY SEASON 2</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://app.nodepay.ai/register?ref=mLRPvVDIstRycY7" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://app.nodepay.ai/register?ref=mLRPvVDIstRycY7" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/ManiUrstruly/status/1864369684608344231" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -519,13 +459,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>LAYEREDGE</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://dashboard.layeredge.io/register?invite_code=H9nTwo5I" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://dashboard.layeredge.io/register?invite_code=H9nTwo5I" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/InfluencerDee/status/1882775443797086697" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -533,13 +471,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>TOGGLE</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://toggle.pro/sign-up/8e10646a-6819-479f-a0ed-972d765abbf3" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://toggle.pro/sign-up/8e10646a-6819-479f-a0ed-972d765abbf3" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/IamOluKT/status/1884751608862405000" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -547,27 +483,23 @@
         </div>
 
              <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>ARCH NETWORK</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary w-50 me-2">Referral Link</a> 
-                        <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success w-50">Steps</a>
+                        <a href="https://dashboard.arch.network?referralCode=6df582b6-e846-469b-8b7c-0b27c68cbf5d" class="btn btn-primary w-5 me-2">Referral Link</a> 
+                        <a href="https://x.com/InfluencerDee/status/1870251376292331683" class="btn btn-success w-5">Steps</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>MY GATE NETWORK</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://app.mygate.network/login?code=SrYk2E" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://app.mygate.network/login?code=SrYk2E" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/HottieBabeGem/status/1874932660050841717" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -575,13 +507,11 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>OPEN LEDGER</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://testnet.openledger.xyz/?referral_code=vlkaxurzvq" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://testnet.openledger.xyz/?referral_code=vlkaxurzvq" class="btn btn-primary w-5 me-2">Referral Link</a> 
                         <a href="https://x.com/farmercist_eth/status/1879233494611534000" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -589,12 +519,10 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>OPEN LAYER</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
                         <body>OPEN LAYER REF CODE - DAVEG6</body> 
                         <a href="https://x.com/farmercist_eth/status/1879233494611534000" class="btn btn-success w-5">View Steps</a>
                     </div>            
@@ -603,26 +531,22 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>GRID</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://sso.getgrid.ai/registration?referral_code=50a9e7c" class="btn btn-primary w-50 me-2">Referral Link</a> 
+                        <a href="https://sso.getgrid.ai/registration?referral_code=50a9e7c" class="btn btn-primary w-5 me-2">Referral Link</a> 
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>GAIA NET</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://gaianet.ai/reward?invite_code=RcKHZF" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://gaianet.ai/reward?invite_code=RcKHZF" class="btn btn-primary w-5 me-2">Referral Link</a>
                         <a href="https://x.com/InfluencerDee/status/1879918277381775760" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -630,15 +554,13 @@
         </div>
     
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>HAUST NETWORK</h4>
-                    <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between"> 
-                        <a href="https://faucet-test.haust.network/" class="btn btn-primary w-50 me-2">Faucet Link</a>
-                        <a href="https://petridish.haust.ntwork" class="btn btn-primary w-50 me-2">MINT NFT</a>
-                        <a href="https://dex.testnet.haust.app/#/send" class="btn btn-primary w-50 me-2">SEND TEST TOKENS</a>
+                    <p class="card-text">Earn Real Crypto rewards by participating.</p> 
+                        <a href="https://faucet-test.haust.network/" class="btn btn-primary w-5 me-2">Faucet Link</a>
+                        <a href="https://petridish.haust.ntwork" class="btn btn-primary w-5 me-2">MINT NFT</a>
+                        <a href="https://dex.testnet.haust.app/#/send" class="btn btn-primary w-5 me-2">SEND TEST TOKENS</a>
                         <a href="https://x.com/MaransCrypto/status/1886782522182524983" class="btn btn-success w-5">View Steps</a>
                     </div>            
                 </div>
@@ -650,14 +572,13 @@
         <div class="category-banner" id="telegram">
             <h2 class="mb-0"><i class="fas fa-satellite-dish me-2"></i> Telegram</h2>
         </div>
-        <div class="divider">
-            <div class="col-md-6">
-                <div class="project-card">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <img src="assets/icons/telegram1.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
                     <h4>TINY VERSE</h4>
                     <p>Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/tverse?startapp=gift-EsU6UFbreSTT" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/tverse?startapp=gift-EsU6UFbreSTT" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>
                 </div>
             </div>
@@ -665,39 +586,33 @@
     </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>MIDAS YIELDER</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/MidasRWA_bot/app?startapp=ref_a1ecd4f4-af5d-4b98-8bd9-0362f22c95cd" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/MidasRWA_bot/app?startapp=ref_a1ecd4f4-af5d-4b98-8bd9-0362f22c95cd" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>HODL HIGH</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/cube_hodl_bot/app?startapp=cube2dBMmn" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/cube_hodl_bot/app?startapp=cube2dBMmn" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>KLINK FINANCE</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/KlinkFinanceBot?start=6897830956" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/KlinkFinanceBot?start=6897830956" class="btn btn-primary w-5 me-2">Referral Link</a>
                         <a href="https://join.klinkfinance.com/PT65mJo5BQb" class="btn btn-success w-5">APP</a>
                     </div>            
                 </div>
@@ -705,142 +620,122 @@
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>HI PIN </h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/hi_PIN_bot/app?startapp=p6GHTpP" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/hi_PIN_bot/app?startapp=p6GHTpP" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>DUROV CAPS</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/DurovCapsBot/caps?startapp=6897830956" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/DurovCapsBot/caps?startapp=6897830956" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>SIGMA</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/sigmatonbot/app?startapp=ref_362sgfg" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/sigmatonbot/app?startapp=ref_362sgfg" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>UXUY WALLET</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/UXUYbot/app?startapp=A_6897830956_inviteEarn" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/UXUYbot/app?startapp=A_6897830956_inviteEarn" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>VOOI APP</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/VooiAppBot/vooi?startapp=frenIDxQJj4Vz" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/VooiAppBot/vooi?startapp=frenIDxQJj4Vz" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>DRFT PARTY</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/drft_party_bot/game?startapp=6897830956F" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/drft_party_bot/game?startapp=6897830956F" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>TONxDAO</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/tonxdao_bot?start=ref_6897830956" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/tonxdao_bot?start=ref_6897830956" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>BOINKERS</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/boinker_bot/boinkapp?startapp=boink6897830956" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/boinker_bot/boinkapp?startapp=boink6897830956" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>POCKET FI</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/pocketfi_bot/Mining?startapp=6897830956" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/pocketfi_bot/Mining?startapp=6897830956" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
             <!-- Another Project -->
-            <div class="col-md-6">
-                <div class="project-card">
-                    <img src="assets/icons/project2.png" alt="Project Icon" class="img-fluid mb-3" style="height: 60px;">
+            <div class="col-md-4">
+                <div class="project-card animate-fade-in">
                     <h4>BLUM</h4>
                     <p class="card-text">Earn Real Crypto rewards by participating.</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="https://t.me/blum/app?startapp=ref_45KNCCFxudF" class="btn btn-primary w-50 me-2">Referral Link</a>
+                        <a href="https://t.me/blum/app?startapp=ref_45KNCCFxudF" class="btn btn-primary w-5 me-2">Referral Link</a>
                     </div>            
                 </div>
             </div>
         </div>
 
         <!-- Testnet Tokens Section -->
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2 class="text-center mb-4">Get Free Testnet Tokens</h2>
             <p class="text-center">Need testnet tokens to interact with blockchain projects? Get them here:</p>
   
                     <div class="row justify-content-center">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                     <ul class="list-group">
                     <li class="list-group-item">
                         <a href="https://t.me/TestcoinFaucetNewBot" target="_blank">Testcoin Faucet</a>
